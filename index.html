@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body>
+
+    <h1 id="element">H1 Element node</h1>
+    <div id="task1">This is div.</div>
+
+    <!-- comment node -->
+    <img id="image" alt="att node">
+    <p id="para">This is Paragraph</p>
+    
+    <script>
+        //h1
+    const name = document.getElementById("element");
+    console.log(name)
+
+    const nodes = document.body.childNodes;
+let text = "";
+for (let i = 0; i < nodes.length; i++) {
+  text += nodes[i].nodeType + " " + nodes[i].nodeName + "<br>";}
+  console.log(nodes);
+
+  //p
+  const para = document.getElementById("para");
+  console.log(`para nodeValue ${para.nodeValue}para nodeType ${para.nodeType} and para nodeName ${para.nodeName}`)
+
+
+  //att node
+  const img = document.getElementsByTagName("img");
+  console.log(`img nodeType ${img.nodeName}, nodeType ${img.nodeType}`)
+    </script>
+</body>
+</html>
